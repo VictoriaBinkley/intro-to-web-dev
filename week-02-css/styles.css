@@ -1,16 +1,25 @@
 body {
-  Background-image: url('')
-  background-color: #323232;
-}
-		
+  background-color: #C32727;
+}		
 p {
-  color: white;
+  color: yellow;
 	text-align: center;
   font-size: 24px;
 }
-			
+
 h1 {
+  color: #000000;
+  border: thin solid black;
+	text-align: center;
+}
+			
+h2 {
   color: #00ffff;
-  border: thin solid red;
-	text-align: right;
+  border: thin solid black;
+	text-align: center;
+}
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
