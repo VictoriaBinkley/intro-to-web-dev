@@ -30,6 +30,11 @@ h2 {
 .high {
    border: thick dotted white;
 }
+.poor {
+   border: thick dotted black;
+   Background-color: Purple;
+}
+
 
 img {
   display: block;
