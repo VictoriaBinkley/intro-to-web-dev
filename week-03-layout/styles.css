@@ -1,12 +1,22 @@
-nav {
-  border: thin solid black;
+body {
+  background-color: #ccccff;
+}		
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.middle {
+  display: flex;
+  gap: 10px
+}
+
+.content {
+  flex-grow: 1;
 }
 
 div {
   border: thin solid black;
-  margin: 25px 0;
-}
-
-footer {
-  border: thin solid black;
+  padding: 10px;
 }
