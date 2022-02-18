@@ -1,3 +1,7 @@
+body {
+  background-color: #ccccff;
+}
+
 #output {
   /* Output starts invisible */
   display: none;
