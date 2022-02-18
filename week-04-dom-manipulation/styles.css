@@ -6,3 +6,46 @@
 #adjective-one-output {
   font-weight: bold;
 }
+
+#output {
+  /* Output starts invisible */
+  display: none;
+}
+
+#adjective-one-output {
+  font-weight: bold;
+}
+
+#output2 {
+ /* Output2 starts invisible too */
+  display: none;
+}
+
+#place-one-output {
+  font-weight: bold;
+}
+#output3{
+  display: none;
+}
+
+#pet-one-output {
+  font-weight: bold;
+}
+
+#output4 {
+  /* Output2 starts invisible too */
+  display: none;
+}
+
+#verb-one-output{
+  font-weight: bold;
+}
+
+#output5 {
+  /* Output2 starts invisible too */
+  display: none;
+}
+
+#time-one-output{
+  font-weight: bold;
+}
