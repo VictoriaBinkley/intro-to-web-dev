@@ -28,13 +28,22 @@ function submitAnswerTwo() {
   if(answerTwo == 22) {
     alert("That's right!");
     hide('question-two');
-    show('question-three');
+    show('done');
   } else if(answerTwo < 22) {
     alert('The answer is higher.');
   } else {
     alert('The answer is lower.')
   }
 }
+
+
+// When this function is called, it takes the user's answer to the third
+// question and uses if statements to check whether it's correct.
+function submitAnswerThree() {
+  // Get answer three's input element
+  const answerThreeInput = document.getElementById('answer-three-input');
+  // Get the number from answer three's input element
+  const answerThree = answerThreeInput.value;
 
  if(answerThree == 'green') {
    alert("Thats right!");
@@ -47,6 +56,26 @@ function submitAnswerTwo() {
   } else if (answerThree == 'hazel') {
     alert('not according to my license. try again.')
   }
+
+
+// When this function is called, it takes the user's answer to the fourth
+// question and uses if statements to check whether it's correct.
+function submitAnswerFour() {
+  // Get answer four's input element
+  const answerFourInput = document.getElementById('answer-four-input');
+  // Get the text from answer four's input element
+  const answerFour = answerFourInput.value;
+
+  if(answerFour == 'yes') {
+    alert("That's right!");
+    hide('question-four');
+    show('question-done');
+  } else if(answerFour == 'no') {
+    alert('You're Wrong.');
+  } else if(answerFour == 'maybe') {
+    alert('I gave up.')
+  }
+}
 
 
 // Helper function that takes an ID and shows the element with that ID.
