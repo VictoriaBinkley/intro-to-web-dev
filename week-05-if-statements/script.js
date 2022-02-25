@@ -50,12 +50,13 @@ function submitAnswerThree() {
    hide('question-three');
    show('done');
   } else if(answerThree == 'blue') {
-   alert('close. try again.');
+    alert('close. try again.');
   } else if(answerThree == 'brown') {
     alert('too dark. try again')
   } else if (answerThree == 'hazel') {
     alert('not according to my license. try again.')
   }
+}
 
 
 // When this function is called, it takes the user's answer to the fourth
@@ -71,7 +72,7 @@ function submitAnswerFour() {
     hide('question-four');
     show('question-done');
   } else if(answerFour == 'no') {
-    alert('You're Wrong.');
+    alert("You're Wrong.");
   } else if(answerFour == 'maybe') {
     alert('I gave up.')
   }
