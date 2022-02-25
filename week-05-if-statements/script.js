@@ -6,14 +6,14 @@ function submitAnswerOne() {
   // Get the text from answer one's input element
   const answerOne = answerOneInput.value;
 
-  if(answerOne == 'cat') {
+  if(answerOne == 'fish') {
     alert("That's right!");
     hide('question-one');
     show('question-two');
-  } else if(answerOne == 'dog') {
-    alert('Close, but my favorite animal runs away from dogs.');
+  } else if(answerOne == 'shark') {
+    alert('Close, but my favorite animal is a little smaller.');
   } else {
-    alert('Wrong! Hint: My favorite animal meows.')
+    alert('Wrong! Hint: My favorite animal swims.')
   }
 }
 
@@ -25,16 +25,29 @@ function submitAnswerTwo() {
   // Get the number from answer two's input element
   const answerTwo = answerTwoInput.value;
 
-  if(answerTwo == 42) {
+  if(answerTwo == 22) {
     alert("That's right!");
     hide('question-two');
-    show('done');
-  } else if(answerTwo < 42) {
+    show('question-three');
+  } else if(answerTwo < 22) {
     alert('The answer is higher.');
   } else {
     alert('The answer is lower.')
   }
 }
+
+ if(answerThree == 'green') {
+   alert("Thats right!");
+   hide('question-three');
+   show('done');
+  } else if(answerThree == 'blue') {
+   alert('close. try again.');
+  } else if(answerThree == 'brown') {
+    alert('too dark. try again')
+  } else if (answerThree == 'hazel') {
+    alert('not according to my license. try again.')
+  }
+
 
 // Helper function that takes an ID and shows the element with that ID.
 function show(id) {
