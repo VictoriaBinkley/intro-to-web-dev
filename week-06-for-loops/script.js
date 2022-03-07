@@ -109,6 +109,7 @@ function displayUncommonWords(){
 }
 
 
+
 // TODO: Define your own functions here!
 
 function displaySpeechStats() {
@@ -118,6 +119,7 @@ function displaySpeechStats() {
   
   displayLetterBWords(); 
 
+  displayLongestWord();
 
   displayThirdWords();
 
