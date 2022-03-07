@@ -1,15 +1,24 @@
 // Replace this speeh with your own.
 // Notice the `` backticks, which let you split your string into multiple lines.
-const speech = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-    commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-    cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-    est laborum.`;
+const speech = `take a breath, take a breath. 
+keep breathing, counts of three. 
+count to ten. feel the pain lessen in your chest
+take a breath, take a breath
+fill your lungs and your chest. 
+don't think about it. just do it. 
+it shouldn't feel forced, but why can't i just breath. 
+the thing, the act, the assignment, the world, all falling. 
+take a breath, take a breath. 
+anxiety, overthinking, judgement, general living
+make your mind feel fogged, 
+why think about it at all  
+don't cloud your mind
+just breathe. breathe. breathe. 
+just don't tell me to breathe, it's not that easy. `;
 
 // Remove punctuation from the speech. You might have to modify this if your
 // speech contains other punctuation.
+
 const speechPunctuationRemoved = speech.replace(',', '').replace('.', '');
 
 // Use a regular expression to split the speech into individual words. You
@@ -33,12 +42,34 @@ function displayLongWords() {
   }
 }
 
+// Display words that start with letter b.
+
+function displayLetterBWords(){
+  const letterWordsElement = document.getElementById('letter-words');
+
+  for(let word of wordsArray){
+    if(word.startsWith('b')){
+      const wordElement = document.createElement('li');
+      wordElement.innerText = word;
+      letterWordsElement.appendChild(wordElement);
+    }
+  }
+}
+
+
+
+  
+
 // TODO: Define your own functions here!
 
 function displaySpeechStats() {
   document.getElementById('speech').innerText = speech;
 
   displayLongWords();
+  
+  displayLetterBWords(); 
+
+
 
   // TODO: Call your functions here!
 }

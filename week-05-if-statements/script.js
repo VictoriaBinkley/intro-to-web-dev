@@ -47,7 +47,7 @@ function submitAnswerThree() {
 
  if(answerThree == 'green') {
    alert("Thats right!");
-   hide('question-three');
+   hide('question-Three');
    show('done');
   } else if(answerThree == 'blue') {
     alert('close. try again.');
@@ -70,7 +70,7 @@ function submitAnswerFour() {
   if(answerFour == 'yes') {
     alert("That's right!");
     hide('question-four');
-    show('question-done');
+    show('done');
   } else if(answerFour == 'no') {
     alert("You're Wrong.");
   } else if(answerFour == 'maybe') {
