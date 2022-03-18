@@ -8,10 +8,11 @@ let ySpeed = 1;
 function setup() {
   createCanvas(400, 400);
 }
+//Background and background line and house
 
 function draw() {
   background(204,229,255);
-  for (let lineX = 60; lineX <= 300; lineX += 100) {
+  for (let lineX = 70; lineX <= 300; lineX += 115) {
     line(lineX, 0, lineX, height);
   }
 
@@ -48,9 +49,30 @@ fill(224,224,224);
   square(145,175,40);
   square(145,230,40);
 
+}
 
+//Killed it
+function submitAnswerOne() {
+  // Get answer one's input element
+  const answerOneInput = document.getElementById('answer-one-input');
+  // Get the text from answer one's input element
+  const answerOne = answerOneInput.value;
 
+  if(answerOne == 'Yes' || 'yes' || 'YES') {
+    alert("That's right!");
+  } else if(answerOne == 'No' || 'NO' || 'What') {
+    alert('Rude. Try Again.');
+  } else {
+    alert('We doing our best.')
+  }
 }
 
 
- 
+
+
+
+
+
+
+
+
