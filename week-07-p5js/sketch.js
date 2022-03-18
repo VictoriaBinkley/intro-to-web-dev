@@ -12,6 +12,20 @@ function setup() {
 function draw() {
   background(220);
 
+//Moon
+fill(255,255,204);
+   // draw current frame based on state
+  circle(circleX, circleY, 100);
+
+  // modify state
+  circleX = circleX + xSpeed;
+  circleY = circleY + ySpeed;
+
+  //bounce off left and right
+  if(circleX < 0 || circleX > width) {
+    xSpeed = xSpeed * -1;
+  }
+
 //house base
 fill(255,255,153);
   square(125,150,150);
@@ -34,19 +48,7 @@ fill(224,224,224);
   square(145,175,40);
   square(145,230,40);
 
-//Moon
-fill(255,255,204);
-   // draw current frame based on state
-  circle(circleX, circleY, 100);
 
-  // modify state
-  circleX = circleX + xSpeed;
-  circleY = circleY + ySpeed;
-
-  //bounce off left and right
-  if(circleX < 0 || circleX > width) {
-    xSpeed = xSpeed * -1;
-  }
 
 }
 
