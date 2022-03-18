@@ -10,17 +10,18 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background(204,229,255);
+  for (let lineX = 60; lineX <= 300; lineX += 100) {
+    line(lineX, 0, lineX, height);
+  }
 
 //Moon
 fill(255,255,204);
-   // draw current frame based on state
+// draw current frame based on state
   circle(circleX, circleY, 100);
-
-  // modify state
+// modify state
   circleX = circleX + xSpeed;
-
-  //bounce off left and right
+//bounce off left and right
   if(circleX < 2 || circleX > width) {
     xSpeed = xSpeed * -1;
   }
