@@ -19,10 +19,9 @@ fill(255,255,204);
 
   // modify state
   circleX = circleX + xSpeed;
-  circleY = circleY + ySpeed;
 
   //bounce off left and right
-  if(circleX < 0 || circleX > width) {
+  if(circleX < 2 || circleX > width) {
     xSpeed = xSpeed * -1;
   }
 
