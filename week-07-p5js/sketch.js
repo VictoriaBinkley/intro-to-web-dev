@@ -58,9 +58,9 @@ function submitAnswerOne() {
   // Get the text from answer one's input element
   const answerOne = answerOneInput.value;
 
-  if(answerOne == 'Yes' || 'yes' || 'YES') {
+  if(answerOne == 'Yes' || answerOne =='yes' || answerOne =='YES') {
     alert("That's right!");
-  } else if(answerOne == 'No' || 'NO' || 'What') {
+  } else if(answerOne == 'No' || answerOne =='NO' || answerOne =='What') {
     alert('Rude. Try Again.');
   } else {
     alert('We doing our best.')
