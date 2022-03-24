@@ -49,7 +49,7 @@ function loadTable() {
   headerRowElement.appendChild(createElement('th', 'Index'));
   headerRowElement.appendChild(createElement('th', 'Title'));
   headerRowElement.appendChild(createElement('th', 'Time'));
-  headerRowElement.appendChild(createElement('th', "Date- Year/Month/Day"));
+  headerRowElement.appendChild(createElement('th', "Date- Yr/Mo/Dy"));
   tableElement.appendChild(headerRowElement);
 
   // Iterate over the array and create a table row for each object.
