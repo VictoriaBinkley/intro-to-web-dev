@@ -24,6 +24,7 @@ function loadContent() {
 
   loadTable();
   loadShortestMovie();
+  loadAverage();
 }
 
 // Adds a movie to the array and reloads the page content.
@@ -85,6 +86,24 @@ function loadShortestMovie(){
   }
   document.getElementById('shortest-movie').innerText = shortestMovie.title;
 }
+
+//Average run time
+//How to round decimal? 
+
+function loadAverage(){
+  let total = 0;
+ for(let i = 0; i < moviesArray.length; i++){
+    console.log (total)
+   const movie = moviesArray[i];
+    total += Number(movie.time);
+
+ }
+  let average = total / moviesArray.length;
+  console.log (average);
+  document.getElementById('average-time').innerText = average
+  }
+
+
 
 // Helper function that creates an element that contains text content.
 function createElement(tag, text) {
