@@ -1,49 +1,65 @@
-// Array of objects representing a todo list.
-// Modify this array to contain your own list.
-const taskArray = [
-  {label: 'Water plants', time: 3},
-  {label: 'Homework', time: 2},
-  {label: 'Laundry', time: 1},
+// Array of objects representing a movie list.
+
+const moviesArray = [
+  {title: 'The Goonies', time: 114, date: 6/7/1985},
+  {title: 'Hairspray', time: 117, date: 8/20/2007},
+  {title: 'Twilight', time: 124, date: 6/24/2010},
+  {title: 'Harry Potter and the Goblet of Fire', time: 157, date: 11/18/2005},
+  {title: 'Waiting', time: 94, date: 10/7/2005},
+  {title: 'Scooby-Doo', time: 86, date: 6/8/2002},
+  {title: 'Hide and Seek', time: 101, date: 1/28/2005},
+  {title: 'This is the End', time: 107, date: 6/3/2013},
+  {title: 'The Crow', time: 102, date: 5/1/1994},
+  {title: 'Stand By Me', time: 89, date: 8/22/1986}, 
+  {title: 'me before you', time: 110, date: 6/3/2016},
+  {title: 'Napoleon Dynamite', time: 82, date: 6/11/2004},
+  {title: 'Avengers: Endgame', time: 182, date: 4/26/2019},
+
 ];
 
 // Loads the content into the page.
 function loadContent() {
-  // This line of code sorts the array alphabetically by the task labels.
-  // Modify this to sort your data by a different field, or just delete it.
-  taskArray.sort((a, b) => compare(a.label, b.label));
+  // This line of code sorts the array alphabetically by the movie labels.
+  moviesArray.sort((a, b) => compare(a.title, b.title));
 
   loadTable();
-  loadShortestTask();
+  loadShortestMovie();
 }
 
-// Adds a task to the array and reloads the page content.
-function addNewTask() {
-  const newTaskLabel = document.getElementById('label-input').value;
-  const newTaskTime = document.getElementById('time-input').value;
-  const newTask = {label: newTaskLabel, time: newTaskTime };
-  taskArray.push(newTask);
+// Adds a movie to the array and reloads the page content.
+
+function addNewMovie() {
+  const newMovieTitle = document.getElementById('title-input').value;
+  const newMovieTime = document.getElementById('time-input').value;
+  const newMovieDate = document.getElementById('date-input').value;
+  const newMovie = {title: newMovieTitle, time: newMovieTime, date: newMovieDate };
+  moviesArray.push(newMovie);
 
   loadContent();
 }
 
 // Iterates over the data array to create a table.
+
 function loadTable() {
   const tableElement = document.createElement('table');
 
   // Create a header row.
   const headerRowElement = document.createElement('tr');
   headerRowElement.appendChild(createElement('th', 'Index'));
-  headerRowElement.appendChild(createElement('th', 'Label'));
+  headerRowElement.appendChild(createElement('th', 'Title'));
   headerRowElement.appendChild(createElement('th', 'Time'));
+  headerRowElement.appendChild(createElement('th', 'Date'));
   tableElement.appendChild(headerRowElement);
 
   // Iterate over the array and create a table row for each object.
-  for (let i = 0; i < taskArray.length; i++) {
-    const task = taskArray[i];
+
+  for (let i = 0; i < moviesArray.length; i++) {
+    const movie = moviesArray[i];
     const rowElement = document.createElement('tr');
     rowElement.appendChild(createElement('td', i));
-    rowElement.appendChild(createElement('td', task.label));
-    rowElement.appendChild(createElement('td', task.time));
+    rowElement.appendChild(createElement('td', movie.title));
+    rowElement.appendChild(createElement('td', movie.time));
+    rowElement.appendChild(createElement('td', movie.date)); 
     tableElement.appendChild(rowElement);
   }
 
@@ -52,20 +68,22 @@ function loadTable() {
   tableContainer.appendChild(tableElement);
 }
 
-// Displays the name of the shortest task.
-function loadShortestTask(){
-  // Assume the first task is shortest
-  let shortestTask = taskArray[0];
+// Displays the name of the shortest movie.
 
-  // Starting with the second task, look for a shorter task
-  for (let i = 1; i < taskArray.length; i++) {
-    const task = taskArray[i];
-    // If this task is shorter than the previous shortest, it's now the shortest
-    if(task.time < shortestTask.time) {
-      shortestTask = task;
+function loadShortestMovie(){
+  // Assume the first movie is shortest
+  let shortestMovie = moviesArray[0];
+
+  // Starting with the second movie, look for a shorter movie
+  for (let i = 1; i < moviesArray.length; i++) {
+    const movie = moviesArray[i];
+    // If this movie is shorter than the previous shortest, it's now the shortest
+
+    if(movie.time < shortestMovie.time) {
+      shortestMovie = movie;
     }
   }
-  document.getElementById('shortest-task').innerText = shortestTask.label;
+  document.getElementById('shortest-movie').innerText = shortestMovie.title;
 }
 
 // Helper function that creates an element that contains text content.
@@ -77,6 +95,7 @@ function createElement(tag, text) {
 
 // Helper function that compares two values.
 // Works on strings, numbers, and dates.
+
 function compare(valueOne, valueTwo) {
   // valueOne comes before valueTwo
   if (valueOne < valueTwo) {
