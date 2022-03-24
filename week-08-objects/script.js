@@ -1,19 +1,19 @@
 // Array of objects representing a movie list.
 
 const moviesArray = [
-  {title: 'The Goonies', time: 114, date: 6/7/1985},
-  {title: 'Hairspray', time: 117, date: 8/20/2007},
-  {title: 'Twilight', time: 124, date: 6/24/2010},
-  {title: 'Harry Potter and the Goblet of Fire', time: 157, date: 11/18/2005},
-  {title: 'Waiting', time: 94, date: 10/7/2005},
-  {title: 'Scooby-Doo', time: 86, date: 6/8/2002},
-  {title: 'Hide and Seek', time: 101, date: 1/28/2005},
-  {title: 'This is the End', time: 107, date: 6/3/2013},
-  {title: 'The Crow', time: 102, date: 5/1/1994},
-  {title: 'Stand By Me', time: 89, date: 8/22/1986}, 
-  {title: 'me before you', time: 110, date: 6/3/2016},
-  {title: 'Napoleon Dynamite', time: 82, date: 6/11/2004},
-  {title: 'Avengers: Endgame', time: 182, date: 4/26/2019},
+  {title: 'The Goonies', time: 114, date: '1985-06-07'},
+  {title: 'Hairspray', time: 117, date: '2007-08-20'},
+  {title: 'Twilight', time: 124, date: '2010-06-24'},
+  {title: 'Harry Potter and the Goblet of Fire', time: 157, date: '2005-11-18'},
+  {title: 'Waiting', time: 94, date: '2005-10-07'},
+  {title: 'Scooby-Doo', time: 86, date: '2002-06-08'},
+  {title: 'Hide and Seek', time: 101, date: '2005-01-28'},
+  {title: 'This is the End', time: 107, date: '2013-06-03'},
+  {title: 'The Crow', time: 102, date: '1994-05-01'},
+  {title: 'Stand By Me', time: 89, date: '1986-08-22'}, 
+  {title: 'me before you', time: 110, date: '2016-06-03'},
+  {title: 'Napoleon Dynamite', time: 82, date: '2004-06-11'},
+  {title: 'Avengers: Endgame', time: 182, date: '2019-04-26'},
 
 ];
 
@@ -48,7 +48,7 @@ function loadTable() {
   headerRowElement.appendChild(createElement('th', 'Index'));
   headerRowElement.appendChild(createElement('th', 'Title'));
   headerRowElement.appendChild(createElement('th', 'Time'));
-  headerRowElement.appendChild(createElement('th', 'Date'));
+  headerRowElement.appendChild(createElement('th', "Date- Year/Month/Day"));
   tableElement.appendChild(headerRowElement);
 
   // Iterate over the array and create a table row for each object.
