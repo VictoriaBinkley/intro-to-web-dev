@@ -8,7 +8,7 @@ async function loadContent() {
   const json = await response.json();
   const article = json.parse;
 
-  // Get the links in the Wikipedia article, and display them in the page.
+  // Get the links in the Wikipedia article, and display them in the page (1).
   const linksElement = document.getElementById('links');
   for (const link of article.links) {
     const linkElement = document.createElement('a');
@@ -21,10 +21,13 @@ async function loadContent() {
     linksElement.appendChild(liElement);
   }
 
+
   loadImages(article.images);
+  loadLanguages(article.langlinks)
+  loadExternal(article.externallinks)
 }
 
-// Takes an array of image file names, uses the Wikipedia API to get the full
+// Takes an array of image file names, uses the Wikipedia API to get the full (2)
 // URL for each one, and then displays them in the page.
 async function loadImages(images) {
   const imagesContainer = document.getElementById('images');
@@ -52,3 +55,39 @@ async function loadImages(images) {
       imagesContainer.appendChild(imageElement);
   }
 }
+
+//Language 3
+async function loadLanguages(langLinks){
+  const linksElement = document.getElementById('languages');
+    for (const lang of langLinks) {
+        const linkElement = document.createElement('p');
+        linkElement.innerText = lang.langname;
+        const liElement = document.createElement('li');
+        liElement.appendChild(linkElement);
+        linksElement.appendChild(liElement);
+
+      }
+}
+
+//xternal links 4
+async function loadExternal(externallinks){
+
+  const linksElement = document.getElementById('external');
+
+  for (const links of externallinks) {
+      const linkElement = document.createElement('p');
+      linkElement.href = 'https://en.wikipedia.org/wiki/' + externallinks;
+      linkElement.innerText = externallinks;
+      const liElement = document.createElement('li');
+      liElement.appendChild(linkElement);
+      linksElement.appendChild(liElement);
+      break;
+    }
+
+
+}
+
+
+
+
+
