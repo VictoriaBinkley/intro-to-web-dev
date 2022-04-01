@@ -1,3 +1,8 @@
-p {
-  font-size: large;
+#images {
+  width: 500px;
+  border: thin solid black;
+}
+
+#images img {
+  width: 100px;
 }
