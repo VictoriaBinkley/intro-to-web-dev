@@ -14,4 +14,4 @@ function fillOutputs() {
   const outputDiv = document.getElementById('output');
   // Make the output container element visible
   outputDiv.style.display = 'block';
-}
+} 
