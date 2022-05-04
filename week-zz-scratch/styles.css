@@ -31,7 +31,7 @@
 
 .flex-container {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   background-color:;
 }
 
@@ -63,7 +63,7 @@
 
 .flex-containerC {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: Wrap;
   background-color:;
 }
 
@@ -79,7 +79,7 @@
 
 .flex-containerD {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   background-color: ;
 }
 
@@ -95,7 +95,7 @@
 
 .flex-containerE {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   background-color: 
 }
 
@@ -111,7 +111,7 @@
 
 .flex-containerF {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   background-color: 
 }
 
