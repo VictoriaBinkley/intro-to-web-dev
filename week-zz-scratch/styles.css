@@ -41,7 +41,8 @@
   margin: 10px;
   text-align: center;
   line-height: 100px;
-  font-size: 30px;
+  font-size: 16px;
+  Line-height: 80%;
 }
 
 .flex-containerB {
@@ -56,7 +57,8 @@
   margin: 10px;
   text-align: center;
   line-height: 200px;
-  font-size: 30px;
+  font-size: 16px;
+  Line-height: 80%;
 }
 
 .flex-containerC {
@@ -71,7 +73,8 @@
   margin: 10px;
   text-align: center;
   line-height: 200px;
-  font-size: 30px;
+  font-size: 16px;
+  Line-height: 80%;
 }
 
 .flex-containerD {
@@ -86,7 +89,8 @@
   margin: 10px;
   text-align: center;
   line-height: 200px;
-  font-size: 30px;
+  font-size: 16px;
+  Line-height: 80%;
 }
 
 .flex-containerE {
@@ -101,7 +105,8 @@
   margin: 10px;
   text-align: center;
   line-height: 200px;
-  font-size: 30px;
+  font-size: 16px;
+  Line-height: 80%;
 }
 
 .flex-containerF {
@@ -116,7 +121,8 @@
   margin: 10px;
   text-align: center;
   line-height: 200px;
-  font-size: 30px;
+  font-size: 16px;
+  Line-height: 80%;
 }
 
 
